@@ -232,6 +232,7 @@ h1.title {font-size:30px;color:#333;line-height:1.3;position:relative;font-weigh
 .content .highlight .line {height:20px;line-height: 24px;}
 .content .video-container {position:relative;padding-bottom:56.25%;padding-top:25px;height:0;}
 .content .video-container iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
+.content iframe {width:100%;height: 200px;}
 pre .comment,pre .title {color:#999;}
 pre .variable,pre .attribute,pre .tag,pre .regexp,pre .ruby .constant,pre .xml .tag,pre .title,pre .xml .pi,pre .xml .doctype,pre .html .doctype,pre .css .id,pre .css .class,pre .css .pseudo {color:#f2777a;}
 pre .number,pre .preprocessor,pre .built_in,pre .literal,pre .params,pre .constant {color:#f99157;}
