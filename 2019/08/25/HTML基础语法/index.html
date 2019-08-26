@@ -68,7 +68,7 @@ HTML 文档元信息 &amp;lt;meta/&amp;gt; 的重要性&amp;lt;meta/&amp;gt; 可
             <h4 id="HTML-基础"><a href="#HTML-基础" class="headerlink" title="HTML 基础"></a>HTML 基础</h4><iframe src="//player.bilibili.com/player.html?aid=65304676&cid=113340592&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 <h4 id="HTML-文档元信息-lt-meta-gt-的重要性"><a href="#HTML-文档元信息-lt-meta-gt-的重要性" class="headerlink" title="HTML 文档元信息 &lt;meta/&gt; 的重要性"></a>HTML 文档元信息 <code>&lt;meta/&gt;</code> 的重要性</h4><p><code>&lt;meta/&gt;</code> 可分为两大部分：[ http-equiv ] 和 [ name ] 变量</p>
-<h5 id="http-equiv"><a href="#http-equiv" class="headerlink" title="[ http-equiv ]"></a>[ http-equiv ]</h5><p>http-equiv相当于http的文件头作用，它可以向浏览器传回一些有用的信息，以帮助浏览器正确地显示网页内容。</p>
+<h4 id="http-equiv"><a href="#http-equiv" class="headerlink" title="[ http-equiv ]"></a>[ http-equiv ]</h4><p>http-equiv相当于http的文件头作用，它可以向浏览器传回一些有用的信息，以帮助浏览器正确地显示网页内容。</p>
 <table>
 <thead>
 <tr>
@@ -105,7 +105,7 @@ HTML 文档元信息 &amp;lt;meta/&amp;gt; 的重要性&amp;lt;meta/&amp;gt; 可
 <td>缓存机制<br><code>&lt;meta http-equiv=&quot;cache-control&quot; content=&quot;no-cache&quot;&gt;</code><br>Public：指示响应可被任何缓存区缓存。<br>Private：指示对于单个用户的整个或部分响应消息，不能被共享缓存处理。这允许服务器仅仅描述当用户的部分响应消息，此响应消息对于其他用户的请求无效。<br>no-cache：指示请求或响应消息不能缓存。<br>no-store：用于防止重要的信息被无意的发布。在请求消息中发送将使得请求和响应消息都不使用缓存。<br>max-age：指示客户机可以接收生存期不大于指定时间（以秒为单位）的响应。<br>min-fresh：指示客户机可以接收响应时间小于当前时间加上指定时间的响应。<br>max-stale：指示客户机可以接收超出超时期间的响应消息。如果指定max-stale消息的值，那么客户机可以接收超出超时期指定值之内的响应消息。</td>
 </tr>
 </tbody></table>
-<h5 id="name"><a href="#name" class="headerlink" title="[ name ]"></a>[ name ]</h5><p>name属性主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的。</p>
+<h4 id="name"><a href="#name" class="headerlink" title="[ name ]"></a>[ name ]</h4><p>name属性主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的。</p>
 <table>
 <thead>
 <tr>
@@ -162,7 +162,7 @@ HTML 文档元信息 &amp;lt;meta/&amp;gt; 的重要性&amp;lt;meta/&amp;gt; 可
 <td>div、header、nav、article、aside、section、footer、p、h1~h6、ul、ol…</td>
 </tr>
 </tbody></table>
-<h5 id="块级元素特点："><a href="#块级元素特点：" class="headerlink" title="块级元素特点："></a>块级元素特点：</h5><ul>
+<h4 id="块级元素特点："><a href="#块级元素特点：" class="headerlink" title="块级元素特点："></a>块级元素特点：</h4><ul>
 <li>独占一行</li>
 <li>行高和边距可变</li>
 <li>可以容纳块级元素和内联元素</li>
@@ -180,13 +180,13 @@ HTML 文档元信息 &amp;lt;meta/&amp;gt; 的重要性&amp;lt;meta/&amp;gt; 可
 <td>span、img、label、input、button….</td>
 </tr>
 </tbody></table>
-<h5 id="内联元素特点："><a href="#内联元素特点：" class="headerlink" title="内联元素特点："></a>内联元素特点：</h5><ul>
+<h4 id="内联元素特点："><a href="#内联元素特点：" class="headerlink" title="内联元素特点："></a>内联元素特点：</h4><ul>
 <li>与其他元素在同一行上</li>
 <li>行高和边距不可变</li>
 <li>只可容纳内联元素</li>
 <li>display: inline / inline-block;</li>
 </ul>
-<h5 id="置换元素"><a href="#置换元素" class="headerlink" title="置换元素"></a>置换元素</h5><p>一个内容不受 CSS 视觉格式化模型控制，CSS 渲染模型并不考虑对此内容的渲染，且元素本身一般拥有固有尺寸（宽度，高度，宽高比）的元素，浏览器会根据置换元素的标签和属性，来决定元素的具体显示内容。</p>
+<h4 id="置换元素"><a href="#置换元素" class="headerlink" title="置换元素"></a>置换元素</h4><p>一个内容不受 CSS 视觉格式化模型控制，CSS 渲染模型并不考虑对此内容的渲染，且元素本身一般拥有固有尺寸（宽度，高度，宽高比）的元素，浏览器会根据置换元素的标签和属性，来决定元素的具体显示内容。</p>
 <p>置换元素与一般行内元素的区别在于：置换元素拥有内在尺寸，可以设置宽高，其性质等同于设置了 display: inline-block; 的元素。</p>
 <p>常见的有 <code>&lt;img&gt;</code>、<code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code>、<code>&lt;select&gt;</code>、<code>&lt;object&gt;</code>等</p>
 <h4 id="HTML-语义化"><a href="#HTML-语义化" class="headerlink" title="HTML 语义化"></a>HTML 语义化</h4><ul>
@@ -255,11 +255,11 @@ HTML 文档元信息 &amp;lt;meta/&amp;gt; 的重要性&amp;lt;meta/&amp;gt; 可
 <td>定义日期/时间</td>
 </tr>
 </tbody></table>
-<h5 id="例如下面这段代码"><a href="#例如下面这段代码" class="headerlink" title="例如下面这段代码:"></a>例如下面这段代码:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;!--页眉--&gt;</span><br><span class="line">  &lt;header&gt;&lt;/header&gt;</span><br><span class="line">  &lt;!--导航--&gt;</span><br><span class="line">  &lt;nav&gt;&lt;/nav&gt;</span><br><span class="line">  &lt;!--主内容--&gt;</span><br><span class="line">  &lt;main&gt;</span><br><span class="line">    &lt;!--文章--&gt;</span><br><span class="line">    &lt;article&gt;</span><br><span class="line">      &lt;!--节--&gt;</span><br><span class="line">      &lt;section&gt;</span><br><span class="line">        &lt;!-- 表单 --&gt;</span><br><span class="line">        &lt;form&gt;</span><br><span class="line">          &lt;!-- 围绕表单的边框 --&gt;</span><br><span class="line">         &lt;fieldset&gt;</span><br><span class="line">          &lt;!-- fieldset 元素的标题 --&gt;</span><br><span class="line">          &lt;legend&gt;Personalia:&lt;/legend&gt;</span><br><span class="line">            &lt;!-- input标注 --&gt;</span><br><span class="line">            &lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;</span><br><span class="line">            &lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;male&quot; value=&quot;male&quot;&gt;</span><br><span class="line">            &lt;!-- 重置按钮 --&gt;</span><br><span class="line">            &lt;input type=&quot;reset&quot; value=&quot;重置&quot;&gt;</span><br><span class="line">            &lt;!-- 提交按钮 --&gt;</span><br><span class="line">            &lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;</span><br><span class="line">         &lt;/fieldset&gt;&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">      &lt;/section&gt;</span><br><span class="line">    &lt;/article&gt;</span><br><span class="line">    &lt;!-- 页面内容之外的内容 --&gt;</span><br><span class="line">    &lt;aside&gt;&lt;/aside&gt;</span><br><span class="line">  &lt;/main&gt;</span><br><span class="line">  &lt;!--页脚--&gt;</span><br><span class="line">  &lt;footer&gt;&lt;/footer&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="例如下面这段代码"><a href="#例如下面这段代码" class="headerlink" title="例如下面这段代码:"></a>例如下面这段代码:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;!--页眉--&gt;</span><br><span class="line">  &lt;header&gt;&lt;/header&gt;</span><br><span class="line">  &lt;!--导航--&gt;</span><br><span class="line">  &lt;nav&gt;&lt;/nav&gt;</span><br><span class="line">  &lt;!--主内容--&gt;</span><br><span class="line">  &lt;main&gt;</span><br><span class="line">    &lt;!--文章--&gt;</span><br><span class="line">    &lt;article&gt;</span><br><span class="line">      &lt;!--节--&gt;</span><br><span class="line">      &lt;section&gt;</span><br><span class="line">        &lt;!-- 表单 --&gt;</span><br><span class="line">        &lt;form&gt;</span><br><span class="line">          &lt;!-- 围绕表单的边框 --&gt;</span><br><span class="line">         &lt;fieldset&gt;</span><br><span class="line">          &lt;!-- fieldset 元素的标题 --&gt;</span><br><span class="line">          &lt;legend&gt;Personalia:&lt;/legend&gt;</span><br><span class="line">            &lt;!-- input标注 --&gt;</span><br><span class="line">            &lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;</span><br><span class="line">            &lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;male&quot; value=&quot;male&quot;&gt;</span><br><span class="line">            &lt;!-- 重置按钮 --&gt;</span><br><span class="line">            &lt;input type=&quot;reset&quot; value=&quot;重置&quot;&gt;</span><br><span class="line">            &lt;!-- 提交按钮 --&gt;</span><br><span class="line">            &lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;</span><br><span class="line">         &lt;/fieldset&gt;&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">      &lt;/section&gt;</span><br><span class="line">    &lt;/article&gt;</span><br><span class="line">    &lt;!-- 页面内容之外的内容 --&gt;</span><br><span class="line">    &lt;aside&gt;&lt;/aside&gt;</span><br><span class="line">  &lt;/main&gt;</span><br><span class="line">  &lt;!--页脚--&gt;</span><br><span class="line">  &lt;footer&gt;&lt;/footer&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
 <h4 id="Canvas-图形绘制"><a href="#Canvas-图形绘制" class="headerlink" title="Canvas 图形绘制"></a>Canvas 图形绘制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  var c = document.getElementById(&apos;myCanvas&apos;);</span><br><span class="line">  var ctx = c.getContext(&apos;2d&apos;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<h5 id="绘制基本图形"><a href="#绘制基本图形" class="headerlink" title="绘制基本图形"></a>绘制基本图形</h5><table>
+<h4 id="绘制基本图形"><a href="#绘制基本图形" class="headerlink" title="绘制基本图形"></a>绘制基本图形</h4><table>
 <thead>
 <tr>
 <th align="center">图形</th>
@@ -303,7 +303,7 @@ HTML 文档元信息 &amp;lt;meta/&amp;gt; 的重要性&amp;lt;meta/&amp;gt; 可
 <td>rotate(angle)</td>
 </tr>
 </tbody></table>
-<h5 id="颜色-amp-阴影"><a href="#颜色-amp-阴影" class="headerlink" title="颜色 &amp; 阴影"></a>颜色 &amp; 阴影</h5><table>
+<h4 id="颜色-amp-阴影"><a href="#颜色-amp-阴影" class="headerlink" title="颜色 &amp; 阴影"></a>颜色 &amp; 阴影</h4><table>
 <thead>
 <tr>
 <th align="center">属性</th>
@@ -335,7 +335,7 @@ HTML 文档元信息 &amp;lt;meta/&amp;gt; 的重要性&amp;lt;meta/&amp;gt; 可
 <td>设置或返回阴影距形状的垂直距离</td>
 </tr>
 </tbody></table>
-<h5 id="图像的应用"><a href="#图像的应用" class="headerlink" title="图像的应用"></a>图像的应用</h5><p>复制图像：drawImage(img,sx,sy,swidth,sheight,x,y,width,height)<br>裁剪图像：clip()<br>平铺图像：createPattern(image,”repeat|repeat-x|repeat-y|no-repeat”)</p>
+<h4 id="图像的应用"><a href="#图像的应用" class="headerlink" title="图像的应用"></a>图像的应用</h4><p>复制图像：drawImage(img,sx,sy,swidth,sheight,x,y,width,height)<br>裁剪图像：clip()<br>平铺图像：createPattern(image,”repeat|repeat-x|repeat-y|no-repeat”)</p>
 <table>
 <thead>
 <tr>
@@ -380,7 +380,7 @@ HTML 文档元信息 &amp;lt;meta/&amp;gt; 的重要性&amp;lt;meta/&amp;gt; 可
 <td>可选。要使用的图像的高度。（伸展或缩小图像）</td>
 </tr>
 </tbody></table>
-<h5 id="文字的应用"><a href="#文字的应用" class="headerlink" title="文字的应用"></a>文字的应用</h5><p>“被填充的”文本：fillText(text,x,y,maxWidth)<br>绘制文本（无填充）：strokeText(text,x,y,maxWidth)</p>
+<h4 id="文字的应用"><a href="#文字的应用" class="headerlink" title="文字的应用"></a>文字的应用</h4><p>“被填充的”文本：fillText(text,x,y,maxWidth)<br>绘制文本（无填充）：strokeText(text,x,y,maxWidth)</p>
 <h4 id="HTML5-代码规范"><a href="#HTML5-代码规范" class="headerlink" title="HTML5 代码规范"></a>HTML5 代码规范</h4><ul>
 <li>请使用正确的文档类型<code>&lt;!DOCTYPE html&gt;</code></li>
 <li>使用小写元素名<br>混合大小写名称并不好<br>开发者习惯使用小写名（比如在 XHTML 中）<br>小写更起来更纯净<br>小写更易书写</li>
