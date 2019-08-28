@@ -189,15 +189,15 @@
 <td>用于动态计算长度值。任何长度值都可以使用calc()函数进行计算。calc()函数支持+, -, *, /, mod运算，以后还可能加入对min()/max()等运算。<code>.test{width:-moz-calc(100% - 50px);width:calc(100% - 50px);background:#eee;}</code></td>
 </tr>
 <tr>
-<td align="center">min()浏览器不支持</td>
+<td align="center">min()</td>
 <td>用于比较数值的大小并取出最小的那个。<code>div{width:min(10% + 20px, 300px);}</code></td>
 </tr>
 <tr>
-<td align="center">max()浏览器不支持</td>
+<td align="center">max()</td>
 <td>用于比较数值的大小并取出最大的那个。<code>div{width:max(10% + 20px, 300px);}</code></td>
 </tr>
 <tr>
-<td align="center">cycle()浏览器不支持</td>
+<td align="center">cycle()</td>
 <td>允许子孙元素使用取值序列中的值循环替换继承而来的值。<code>li &gt; ul{list-style-type:toggle(disk,circle,square,box);}</code></td>
 </tr>
 </tbody></table>
@@ -456,95 +456,95 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">link</td>
+<td align="center">E:link</td>
 <td>设置超链接a在未被访问前的样式。</td>
 </tr>
 <tr>
-<td align="center">visited</td>
+<td align="center">E:visited</td>
 <td>设置超链接a在其链接地址已被访问过时的样式。</td>
 </tr>
 <tr>
-<td align="center">hover</td>
+<td align="center">E:hover</td>
 <td>设置元素在其鼠标悬停时的样式。</td>
 </tr>
 <tr>
-<td align="center">active</td>
+<td align="center">E:active</td>
 <td>设置元素在被用户激活（在鼠标点击与释放之间发生的事件）时的样式。</td>
 </tr>
 <tr>
-<td align="center">focus</td>
+<td align="center">E:focus</td>
 <td>设置元素在成为输入焦点（该元素的onfocus事件发生）时的样式。</td>
 </tr>
 <tr>
-<td align="center">lang(fr)</td>
+<td align="center">E:lang(fr)</td>
 <td>匹配使用特殊语言的E元素。</td>
 </tr>
 <tr>
-<td align="center">not(s)</td>
+<td align="center">E:not(s)</td>
 <td>匹配不含有s选择符的元素E。</td>
 </tr>
 <tr>
-<td align="center">root</td>
+<td align="center">E:root</td>
 <td>匹配E元素在文档的根元素。</td>
 </tr>
 <tr>
-<td align="center">first-child</td>
+<td align="center">E:first-child</td>
 <td>匹配父元素的第一个子元素E。</td>
 </tr>
 <tr>
-<td align="center">last-child</td>
+<td align="center">E:last-child</td>
 <td>匹配父元素的最后一个子元素E。</td>
 </tr>
 <tr>
-<td align="center">only-child</td>
+<td align="center">E:only-child</td>
 <td>匹配父元素仅有的一个子元素E。</td>
 </tr>
 <tr>
-<td align="center">nth-child(n)</td>
+<td align="center">E:nth-child(n)</td>
 <td>匹配父元素的第n个子元素E。</td>
 </tr>
 <tr>
-<td align="center">nth-last-child(n)</td>
+<td align="center">E:nth-last-child(n)</td>
 <td>匹配父元素的倒数第n个子元素E。</td>
 </tr>
 <tr>
-<td align="center">first-of-type</td>
+<td align="center">E:first-of-type</td>
 <td>匹配同类型中的第一个同级兄弟元素E。</td>
 </tr>
 <tr>
-<td align="center">last-of-type</td>
+<td align="center">E:last-of-type</td>
 <td>匹配同类型中的最后一个同级兄弟元素E。</td>
 </tr>
 <tr>
-<td align="center">only-of-type</td>
+<td align="center">E:only-of-type</td>
 <td>匹配同类型中的唯一的一个同级兄弟元素E。</td>
 </tr>
 <tr>
-<td align="center">nth-of-type(n)</td>
+<td align="center">E:nth-of-type(n)</td>
 <td>匹配同类型中的第n个同级兄弟元素E。</td>
 </tr>
 <tr>
-<td align="center">nth-last-of-type(n)</td>
+<td align="center">E:nth-last-of-type(n)</td>
 <td>匹配同类型中的倒数第n个同级兄弟元素E。</td>
 </tr>
 <tr>
-<td align="center">empty</td>
+<td align="center">E:empty</td>
 <td>匹配没有任何子元素（包括text节点）的元素E。</td>
 </tr>
 <tr>
-<td align="center">checked</td>
+<td align="center">E:checked</td>
 <td>匹配用户界面上处于选中状态的元素E。(用于input type为radio与checkbox时)</td>
 </tr>
 <tr>
-<td align="center">enabled</td>
+<td align="center">E:enabled</td>
 <td>匹配用户界面上处于可用状态的元素E。</td>
 </tr>
 <tr>
-<td align="center">disabled</td>
+<td align="center">E:disabled</td>
 <td>匹配用户界面上处于禁用状态的元素E。</td>
 </tr>
 <tr>
-<td align="center">target</td>
+<td align="center">E:target</td>
 <td>匹配相关URL指向的E元素。</td>
 </tr>
 <tr>
@@ -568,23 +568,27 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">first-letter/:first-letter</td>
+<td align="center">E:first-letter/:first-letter</td>
 <td>设置对象内的第一个字符的样式。</td>
 </tr>
 <tr>
-<td align="center">first-line/:first-line</td>
+<td align="center">E:first-line/:first-line</td>
 <td>设置对象内的第一行的样式。</td>
 </tr>
 <tr>
-<td align="center">before/:before</td>
+<td align="center">E:before/:before</td>
 <td>设置在对象前（依据对象树的逻辑结构）发生的内容。用来和content属性一起使用</td>
 </tr>
 <tr>
-<td align="center">after/:after</td>
+<td align="center">E:after/:after</td>
 <td>设置在对象后（依据对象树的逻辑结构）发生的内容。用来和content属性一起使用</td>
 </tr>
 <tr>
-<td align="center">:selection</td>
+<td align="center">E::placeholder</td>
+<td>设置对象文字占位符的样式。</td>
+</tr>
+<tr>
+<td align="center">E::selection</td>
 <td>设置对象被选择时的颜色。</td>
 </tr>
 </tbody></table>
