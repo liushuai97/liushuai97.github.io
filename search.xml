@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[JavaScript 错误与调试]]></title>
     <url>%2F2019%2F09%2F09%2FJavaScript-%E9%94%99%E8%AF%AF%E4%B8%8E%E8%B0%83%E8%AF%95%2F</url>
-    <content type="text"><![CDATA[浏览器的报错try-catch语句12345try &#123; // 可能会导致出错的代码&#125; catch(error) &#123; // 在错误发生时怎么处理&#125; 错误类型 Error:基类，其它错误类型都继承自该类型。 EvalError：如果没将eval当成函数调用就会抛出此类型错误。 RangeError:超出范围就会抛出此错误类型。例如：在初始化数组时传入了不支持的项数，比如-20。 ReferenceError:访问不存在的变量时会抛出此类型的错误。 SyntaxError: 当语法错误时会抛出此类型的错误。例如：在js中运行 ’a 这样的错误语句。 TypeError:当发生类型错误时抛出此类型的错误。例如：运行不存在的方法，在undefined中取值 URIError:在使用encodeURI或decodeURI时url格式不正确会抛出此类错误。我尝试传入对象，数值都没抛出错误。例:%abcd。会报错 Error是基类型，其他错误类型都继承自该类型。 浏览器的调试 error(message)：将错误消息记录到控制台 info(message)：将信息性消息记录到控制台 log(message)：将一般消息记录到控制台 warn(message)：将警告消息记录到控制台]]></content>
+    <content type="text"><![CDATA[浏览器的报错try-catch语句12345try &#123; // 可能会导致出错的代码&#125; catch(error) &#123; // 在错误发生时怎么处理&#125; 错误类型 Error:基类，其它错误类型都继承自该类型。 EvalError：如果没将eval当成函数调用就会抛出此类型错误。 RangeError:超出范围就会抛出此错误类型。例如：在初始化数组时传入了不支持的项数，比如-20。 ReferenceError:访问不存在的变量时会抛出此类型的错误。 SyntaxError: 当语法错误时会抛出此类型的错误。例如：在js中运行 ’a 这样的错误语句。 TypeError:当发生类型错误时抛出此类型的错误。例如：运行不存在的方法，在undefined中取值 URIError:在使用encodeURI或decodeURI时url格式不正确会抛出此类错误。我尝试传入对象，数值都没抛出错误。例:%abcd。会报错 浏览器的调试 error(message)：将错误消息记录到控制台 info(message)：将信息性消息记录到控制台 log(message)：将一般消息记录到控制台 warn(message)：将警告消息记录到控制台]]></content>
       <categories>
         <category>JavaScript</category>
       </categories>
