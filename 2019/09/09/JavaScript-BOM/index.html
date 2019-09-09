@@ -110,6 +110,18 @@
 <li>screen.availHeight - 可用的屏幕高度</li>
 </ul>
 <h4 id="Cookies"><a href="#Cookies" class="headerlink" title="Cookies"></a>Cookies</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">// 写入</span><br><span class="line">function setCookie(cname,cvalue,exdays)&#123;</span><br><span class="line">  var d = new Date();</span><br><span class="line">  d.setTime(d.getTime()+(exdays*24*60*60*1000));</span><br><span class="line">  var expires = &quot;expires=&quot;+d.toGMTString();</span><br><span class="line">  document.cookie = cname + &quot;=&quot; + cvalue + &quot;; &quot; + expires;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 读取</span><br><span class="line">function getCookie(cname)&#123;</span><br><span class="line">  var name = cname + &quot;=&quot;;</span><br><span class="line">  var ca = document.cookie.split(&apos;;&apos;);</span><br><span class="line">  for(var i=0; i&lt;ca.length; i++)</span><br><span class="line">    &#123;</span><br><span class="line">    var c = ca[i].trim();</span><br><span class="line">    if (c.indexOf(name)==0) return c.substring(name.length,c.length);</span><br><span class="line">  &#125;</span><br><span class="line">  return &quot;&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 检测</span><br><span class="line">function checkCookie()&#123;</span><br><span class="line">  var user=getCookie(&quot;username&quot;);</span><br><span class="line">  if (user!=&quot;&quot;)&#123;</span><br><span class="line">    alert(&quot;Welcome again &quot; + user);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    user = prompt(&quot;Please enter your name:&quot;,&quot;&quot;);</span><br><span class="line">    if (user!=&quot;&quot; &amp;&amp; user!=null) &#123;</span><br><span class="line">      setCookie(&quot;username&quot;,user,365);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="客户端检测"><a href="#客户端检测" class="headerlink" title="客户端检测"></a>客户端检测</h4><ul>
+<li>能力检测：识别浏览器的能力</li>
+<li>怪癖检测：识别浏览器的特殊行为</li>
+<li>用户代理检测：</li>
+</ul>
+<ol>
+<li>不能直接准确地使用能力监测或怪癖检测。</li>
+<li>同一款浏览器在不同平台下具备不同的能力。</li>
+<li>为了跟踪分析等目的需要知道确切的浏览器。</li>
+</ol>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
