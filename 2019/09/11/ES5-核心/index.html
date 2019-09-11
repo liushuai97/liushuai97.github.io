@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ES5 核心 - 随笔</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Web,"> 
+    <meta name="description" content="前端技术,作用域在 JavaScript 中, 作用域（scope，或译有效范围）就是变量和函数的可访问范围，即作用域控制着变量和函数的可见性和生命周期。在ES5中没有块级作用域的概念。
+
+全局作用域（Glo,"> 
+    <meta name="author" content="前端菜鸟"> 
+    <link rel="alternative" href="atom.xml" title="随笔" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">随笔</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="https://liushuai97.github.io"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">ES5 核心</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">ES5 核心</h1>
+        <div class="stuff">
+            <span>九月 11, 2019</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4><p>在 JavaScript 中, 作用域（scope，或译有效范围）就是变量和函数的可访问范围，即作用域控制着变量和函数的可见性和生命周期。在ES5中没有块级作用域的概念。</p>
+<ul>
+<li>全局作用域（Global Scope）：最外层函数定义的变量拥有全局作用域，即对任何内部函数来说，都是可以访问的。</li>
+<li>局部作用域（Local Scope）：和全局作用域相反，局部作用域一般只在固定的代码片段内可访问到，而对于函数外部是无法访问的，最常见的例如函数内部。</li>
+<li>如果局部作用域的“预解析空间”（AO-活动对象（Active object））没有找到，那么代码会从上一级的作用域寻找，上级作用域不能在下级作用域寻找。</li>
+</ul>
+<p>注意事项：</p>
+<ol>
+<li>需要注意的是，函数内部声明变量的时候，一定要使用var命令。如果不用的话，你实际上声明了一个全局变量！</li>
+<li>只要函数内定义了一个局部变量，函数在解析的时候都会将这个变量“提前声明”</li>
+</ol>
+<h4 id="作用域链（Scope-Chain）"><a href="#作用域链（Scope-Chain）" class="headerlink" title="作用域链（Scope Chain）"></a>作用域链（Scope Chain）</h4><p>通俗地讲，当声明一个函数时，局部作用域一级一级向上包起来，就是作用域链。当执行函数时，总是先从函数内部找寻局部变量；如果内部找不到（函数的局部作用域没有），则会向创建函数的作用域（声明函数的作用域）寻找，依次向上。</p>
+<ul>
+<li>执行环境（execution context）：JavaScript为每一个执行环境关联了一个变量对象。环境中定义的所有变量和函数都保存在这个对象中。 </li>
+</ul>
+<h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><ol>
+<li>可以读取自身函数外部的变量（沿着作用域链寻找） </li>
+<li>让这些外部变量始终保存在内存中 </li>
+</ol>
+<p>js函数内的变量值不是在编译的时候就确定的，而是等在运行时期再去寻找的。</p>
+<h4 id="this对象"><a href="#this对象" class="headerlink" title="this对象"></a>this对象</h4><p>“谁调用指向谁”</p>
+<p>this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window，而当函数被作为某个对象调用时，this等于那个对象。不过，匿名函数具有全局性，因此this对象同常指向window。</p>
+<h4 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&apos;use strict&apos;; //在全局或函数内第一行书写</span><br><span class="line">//1.变量必须使用var 定义 否则报错</span><br><span class="line">str=&quot;xxx&quot;;</span><br><span class="line">//2.函数内的this指向不再是window</span><br><span class="line">function Person(name,age) &#123;</span><br><span class="line">        console.log(this);//undefined</span><br><span class="line">        this.name=name;//相当于设置undefined.name =name 报错</span><br><span class="line">        this.age=age;</span><br><span class="line"> &#125;</span><br><span class="line">//3.让eval有自己的作用域</span><br><span class="line"> var str =123;</span><br><span class="line"> eval(&apos;var str=456;alert(str)&apos;);//456</span><br><span class="line"> alert(str);//123</span><br><span class="line">//4.对象不能用重名属性</span><br><span class="line">var obj =&#123;</span><br><span class="line">        username:&apos;kobe&apos;,</span><br><span class="line">        username:&apos;zs&apos;</span><br><span class="line"> &#125;</span><br><span class="line"> console.log(obj);//运行时没有报错,不过编辑器内有提示 最好别这么写就是了</span><br></pre></td></tr></table></figure>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='02bbf3b787da4ece5430'
+        data-cs='34e25126109e44eb92aa169d779294720e927c15'
+        data-r='liushuai97.github.io'
+        data-o='liushuai97'
+        data-a='liushuai97'
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
