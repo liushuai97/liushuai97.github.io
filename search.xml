@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript-自测题3]]></title>
+    <url>%2F2019%2F09%2F23%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%983%2F</url>
+    <content type="text"><![CDATA[严格模式的限制 不允许使用未声明的变量 不允许删除变量或对象。 不允许删除函数。 不允许变量重名。 不允许使用八进制。 不允许使用转义字符。 不允许对只读属性赋值。 不允许对一个使用getter方法读取的属性进行赋值。 不允许删除一个不允许删除的属性。 变量名不能使用 “eval” 字符串。 变量名不能使用 “arguments” 字符串。 不允许使用以下这种语句: 12&quot;use strict&quot;;with (Math)&#123;x = cos(2)&#125;; // 报错 由于一些安全原因，在作用域 eval() 创建的变量不能被调用 禁止this关键字指向全局对象。 禁止使用保留关键字or关键词。 立即执行函数（IIFE）在第一部分中提到IIFE实际是为了解决作用域缺陷而诞生的，那么它的诞生给我们带来了哪些好处呢？ 不必为函数命名，避免了污染全局变量； IIFE内部形成了单独的作用域，可以封住一些外部无法读取的私有变量。 ++i和i++区别在于运算顺序和结合方向。js中有两种自加运算，其运算符均为++，功能为将运算符自加1.其中：++VAR被称为前自加，其后面的变量执行自加操作，其运算为，先执行自加操作，再引用VAR值。VAR++被称为后自加，其前面的变量执行自加操作，其运算为，先引用VAR值，再进行自加操作。 如果自加语句独立成为一个单独的语句，那么前后自加是完全相同的。比如单独的一行a++;和++a;是一样的。再比如，常见的for循环:for(i = 0; i &lt; 100; i ++)for(i = 0; i &lt; 100; ++i)这里用到的++i和i++是完全相同的，没有区别。 当运算变量本身值会在自加语句中，同时执行其它操作，二者就有区别了。比如var i =0;while(i++&lt;10);i会先和10比较大小，然后执行自加。这样当i=10时，退出循环，再执行一次自加，退出后i值为11。而如果写成while(++i&lt;10);是先执行自加，然后再与10比较。这样在i=9时，先自加，得到i=10,然后比较就会退出循环了。这种情况下，退出后i值为10。 再举一个例子。var a, i = 10;a = i ++; //这里i要先赋值，再自加。语句执行后a=10, i = 11;而如果写成：var a, i = 10;a = ++i; //这里i要先自加，再赋值。语句执行后a=11, i = 11; 例题： 12345678910111213var num = 1;function test() &#123; &quot;use strict&quot;; console.log(this.num++);&#125;function test2() &#123; console.log(++this.num);&#125;(function()&#123; &quot;use strict&quot;; test2();&#125;)();test(); 分析图： 例题： 123456789101112131415function C1(name) &#123; if(name)&#123; this.name = name; &#125;&#125;;function C2(name)&#123; this.name = name;&#125;;function C3(name) &#123; this.name = name || &apos;fe&apos;;&#125;;C1.prototype.name = &quot;zhang&quot;;C2.prototype.name = &quot;wang&quot;;C3.prototype.name = &quot;li&quot;;console.log((new C1().name) + (new C2().name) + (new C3().name)) 分析图：]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript 自测题2]]></title>
     <url>%2F2019%2F09%2F23%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%982%2F</url>
     <content type="text"><![CDATA[this的取值在函数中this到底取何值，是在函数真正被调用执行的时候确定的，函数定义的时候确定不了。因为this的取值是执行上下文环境的一部分，每次调用函数，都会产生一个新的执行上下文环境。 this的4种绑定规则 全局环境中，this默认绑定到window 函数独立调用时，this默认绑定到window 被嵌套的函数独立调用时，this默认绑定到window IIFE立即执行函数实际上是函数声明后直接调用执行 闭包（类似地，test()函数是独立调用，而不是方法调用，所以this默认绑定到window） PrototypeJavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。 “构造函数“在 JavaScript 中对于“构造函数”最准确的解释是，所有带 new 的函数调用。函数不是构造函数，但是当且仅当使用 new 时，函数调用会变成“构造函数调用”。 例题： 12345678910111213141516171819this.a = 20; function go() &#123; /* body... */ console.log(this.a); this.a = 30; &#125;;go.prototype.a = 40; var test = &#123; a: 50, init: function(fn) &#123; fn(); console.log(this.a); return fn; &#125;&#125;;console.log((new go()).a); test.init(go); var p = test.init(go); p(); 分析图：]]></content>
