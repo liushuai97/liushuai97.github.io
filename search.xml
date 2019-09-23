@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript 自测题2]]></title>
+    <url>%2F2019%2F09%2F23%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%982%2F</url>
+    <content type="text"><![CDATA[this的取值在函数中this到底取何值，是在函数真正被调用执行的时候确定的，函数定义的时候确定不了。因为this的取值是执行上下文环境的一部分，每次调用函数，都会产生一个新的执行上下文环境。 this的4种绑定规则 全局环境中，this默认绑定到window 函数独立调用时，this默认绑定到window 被嵌套的函数独立调用时，this默认绑定到window IIFE立即执行函数实际上是函数声明后直接调用执行 闭包（类似地，test()函数是独立调用，而不是方法调用，所以this默认绑定到window） PrototypeJavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。 “构造函数“在 JavaScript 中对于“构造函数”最准确的解释是，所有带 new 的函数调用。函数不是构造函数，但是当且仅当使用 new 时，函数调用会变成“构造函数调用”。 例题： 12345678910111213141516171819this.a = 20; function go() &#123; /* body... */ console.log(this.a); this.a = 30; &#125;;go.prototype.a = 40; var test = &#123; a: 50, init: function(fn) &#123; fn(); console.log(this.a); return fn; &#125;&#125;;console.log((new go()).a); test.init(go); var p = test.init(go); p(); 分析图：]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript 自测题1]]></title>
     <url>%2F2019%2F09%2F23%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%981%2F</url>
     <content type="text"><![CDATA[什么是作用域：浏览器给js的生存环境叫作用域。 什么是变量提升： Js代码执行前，浏览器会给一个全局作用域window Window分两个模块一个是存储模块一个是执行模块 存储模块找到所有的var和function 关键字给这些变量添加内存地址 执行模块，代码从上到下执行，遇到变量就会去存储模块查找，有和没有 有就看你赋值没有，赋值了就是后面的值没有赋值就是undefined。 没有结果就是xxx is not defined 什么是原型链？函数内部的变量被使用时，首先会在自己的私有作用域下查找是否有这个变量，有就直接使用，没有就向他的上一级查找，父级有就使用父级的，父级没有就以此继续向上查找直到查找带window有就使用没有就是is not defined。这种查找机制我们叫原型链。 例题： 12345678910alert(a);a();var a = 3;function a() &#123; /* body... */ alert(10);&#125; alert(a);a = 6;a(); 分析图： 例题： 1234567891011121314var x = 1, y = 0, z = 0;function add(x) &#123; /* body... */ return (x = x + 1);&#125;;y = add (x);console.log(y);function add(x) &#123; return (x = x + 3);&#125;;z = add(x);console.log(z); 分析图：]]></content>
