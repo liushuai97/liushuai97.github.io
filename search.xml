@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[JavaScript 自测题]]></title>
-    <url>%2F2019%2F09%2F23%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%98%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[JavaScript 自测题1]]></title>
     <url>%2F2019%2F09%2F23%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%981%2F</url>
-    <content type="text"><![CDATA[什么是作用域：浏览器给js的生存环境叫作用域。 什么是变量提升： Js代码执行前，浏览器会给一个全局作用域window Window分两个模块一个是存储模块一个是执行模块 存储模块找到所有的var和function 关键字给这些变量添加内存地址 执行模块，代码从上到下执行，遇到变量就会去存储模块查找，有和没有 有就看你赋值没有，赋值了就是后面的值没有赋值就是undefined。 没有结果就是xxx is not defined 什么是原型链？函数内部的变量被使用时，首先会在自己的私有作用域下查找是否有这个变量，有就直接使用，没有就向他的上一级查找，父级有就使用父级的，父级没有就以此继续向上查找直到查找带window有就使用没有就是is not defined。这种查找机制我们叫原型链。 例题： 12345678910alert(a);a();var a = 3;function a() &#123; /* body... */ alert(10);&#125; alert(a);a = 6;a(); 分析图：]]></content>
+    <content type="text"><![CDATA[什么是作用域：浏览器给js的生存环境叫作用域。 什么是变量提升： Js代码执行前，浏览器会给一个全局作用域window Window分两个模块一个是存储模块一个是执行模块 存储模块找到所有的var和function 关键字给这些变量添加内存地址 执行模块，代码从上到下执行，遇到变量就会去存储模块查找，有和没有 有就看你赋值没有，赋值了就是后面的值没有赋值就是undefined。 没有结果就是xxx is not defined 什么是原型链？函数内部的变量被使用时，首先会在自己的私有作用域下查找是否有这个变量，有就直接使用，没有就向他的上一级查找，父级有就使用父级的，父级没有就以此继续向上查找直到查找带window有就使用没有就是is not defined。这种查找机制我们叫原型链。 例题： 12345678910alert(a);a();var a = 3;function a() &#123; /* body... */ alert(10);&#125; alert(a);a = 6;a(); 分析图： 例题： 1234567891011121314var x = 1, y = 0, z = 0;function add(x) &#123; /* body... */ return (x = x + 1);&#125;;y = add (x);console.log(y);function add(x) &#123; return (x = x + 3);&#125;;z = add(x);console.log(z); 分析图：]]></content>
       <categories>
         <category>JavaScript</category>
       </categories>
