@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript Events事件句柄]]></title>
+    <url>%2F2019%2F09%2F30%2FJavaScript-Events%E4%BA%8B%E4%BB%B6%E5%8F%A5%E6%9F%84%2F</url>
+    <content type="text"><![CDATA[事件通常与函数配合使用，这样就可以通过发生的事件来驱动函数执行。事件句柄HTML 4.0 的新特性之一是有能力使 HTML 事件触发浏览器中的动作（action），比如当用户点击某个 HTML 元素时启动一段 JavaScript。下面是一个属性列表，这些属性可插入 HTML 标签来定义事件动作。属性当以下情况发生时，出现此事件onabort图像加载被中断onblur元素失去焦点onchange用户改变域的内容onclick鼠标点击某个对象ondblclick鼠标双击某个对象onerror当加载文档或图像时发生某个错误onfocus元素获得焦点onkeydown某个键盘的键被按下onkeypress某个键盘的键被按下或按住onkeyup某个键盘的键被松开onload某个页面或图像被完成加载onmousedown某个鼠标按键被按下onmousemove鼠标被移动onmouseout鼠标从某元素移开onmouseover鼠标被移到某元素之上onmouseup某个鼠标按键被松开onreset重置按钮被点击onresize窗口或框架被调整尺寸onselect文本被选定onsubmit提交按钮被点击onunload用户退出页面]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript Functions全局对象属性与方法]]></title>
     <url>%2F2019%2F09%2F30%2FJavaScript-Functions%E5%85%A8%E5%B1%80%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[全局对象是预定义的对象，作为JavaScript的全局函数和全局属性的占位符。通过使用全局对象，可以访问所有其他所有预定义的对象、函数和属性。全局对象不是任何对象的属性，所以它没有名称。在顶层JavaScript代码中，可以用关键字this引用全局对象。但通常不必用这种方式引用全局对象，因为全局对象是作用域链的头，这意味着所有非限定性的变量和函数名都会作为该对象的属性来查询。全局对象是一个对象，而不是类。既没有构造函数，也无法实例化一个新的全局对象。Function类型，说起来ECMAScript中什么最有意思，我想那莫过于函数了——而有意思的根源，则在于函数实际上是对象。每个函数都是Function类型的实例，而且都与其他引用类型一样具有属性和方法。由于函数是对象，因此函数名实际上也是一个指向函数对象的指针，不会与某个函数绑定。JavaScript 全局对象，全局属性和函数可用于所有内建的 JavaScript 对象。顶层属性（全局属性）方法描述Infinity代表正的无穷大的数值。java代表 java.* 包层级的一个 JavaPackage。NaN指示某个值是不是数字值。Packages根 JavaPackage 对象。undefined指示未定义的值。顶层函数（全局函数）函数描述decodeURI()解码某个编码的 URI。decodeURIComponent()解码一个编码的 URI 组件。encodeURI()把字符串编码为 URI。encodeURIComponent()把字符串编码为 URI 组件。escape()对字符串进行编码。eval()计算 JavaScript 字符串，并把它作为脚本代码来执行。getClass()返回一个 JavaObject 的 JavaClass。isFinite()检查某个值是否为有穷大的数。isNaN()检查某个值是否是数字。Number()把对象的值转换为数字。parseFloat()解析一个字符串并返回一个浮点数。parseInt()解析一个字符串并返回一个整数。String()把对象的值转换为字符串。unescape()对由 escape() 编码的字符串进行解码。]]></content>
