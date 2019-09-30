@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript String对象属性与方法]]></title>
+    <url>%2F2019%2F09%2F30%2FJavaScript-String%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[String类型用于表示由零或多个16位Unicode字符组成的字符序列，即字符串。字符串可以由双引号（”）或单引号（’）表示，因此下面两种字符串的写法都是有效的：12var firstName = &quot;Nicholas&quot;;var lastName = &apos;Zakas&apos;;字符字面量，String数据类型包含一些特殊的字符字面量，也叫转义序列，用于表示非打印字符，或者具有其他用途的字符。字面量含义\n换行\t制表\b空格\r回车\f换页符\\斜杆\&#39;单引号（’）,在用单引号表示的字符串中使用。\&quot;双引号（”）,在用双引号表示的字符串中使用。\xnn以十六进制代码nn表示的一个字符（其中n为0~F）。例如，\x41表示”A”\unnnn以十六进制代码nnnn表示的一个Unicode字符（其中n为0~F）。例如，\u03a3表示希腊字符ΣString 对象String 对象用于处理文本（字符串）。String 对象创建方法： new String().1234var txt = new String(&quot;string&quot;);或者更简单方式：var txt = &quot;string&quot;;String 对象属性属性描述constructor对创建该对象的函数的引用length字符串的长度prototype允许您向对象添加属性和方法String 对象方法方法描述charAt()返回在指定位置的字符。charCodeAt()返回在指定的位置的字符的 Unicode 编码。concat()连接两个或更多字符串，并返回新的字符串。fromCharCode()将 Unicode 编码转为字符。indexOf()返回某个指定的字符串值在字符串中首次出现的位置。lastIndexOf()从后向前搜索字符串。match()查找找到一个或多个正则表达式的匹配。replace()在字符串中查找匹配的子串， 并替换与正则表达式匹配的子串。search()查找与正则表达式相匹配的值。slice()提取字符串的片断，并在新的字符串中返回被提取的部分。split()把字符串分割为字符串数组。substr()从起始索引号提取字符串中指定数目的字符。substring()提取字符串中两个指定的索引号之间的字符。toLowerCase()把字符串转换为小写。toUpperCase()把字符串转换为大写。trim()去除字符串两边的空白valueOf()返回某个字符串对象的原始值。String HTML 包装方法HTML 包装方法返回加入了适当HTML标签的字符串。方法描述anchor()创建 HTML 锚。big()用大号字体显示字符串。blink()显示闪动字符串。bold()使用粗体显示字符串。fixed()以打字机文本显示字符串。fontcolor()使用指定的颜色来显示字符串。fontsize()使用指定的尺寸来显示字符串。italics()使用斜体显示字符串。link()将字符串显示为链接。small()使用小字号来显示字符串。strike()用于显示加删除线的字符串。sub()把字符串显示为下标。sup()把字符串显示为上标。]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript Number对象属性与方法]]></title>
     <url>%2F2019%2F09%2F28%2FJavaScript-Number%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[Number是数字值对应的引用类型。要创建Number对象，可以在调用Number构造函数时向其中传递响应的数值。var numberObject = new Number(value);注意：如果一个采纳数值不能转换为一个数字将返回NaN（非数字值）。Number对象，Number对象是原始数值的包装对象。Number对象属性属性描述constructor返回对创建此对象的 Number 函数的引用。MAX_VALUE可表示的最大的数。MIN_VALUE可表示的最小的数。NEGATIVE_INFINITY负无穷大，溢出时返回该值。NaN非数字值。POSITIVE_INFINITY正无穷大，溢出时返回该值。prototype允许您有能力向对象添加属性和方法。Number对象方法方法描述toExponential(x)把对象的值转换为指数计数法。toFixed(x)把数字转换为字符串，结果的小数点后有指定位数的数字。toPrecision(x)把数字格式化为指定的长度。toString()把数字转换为字符串，使用指定的基数。valueOf()返回一个 Number 对象的基本数字值。12345678910111213var numberObject = new Number(10)console.log(&quot;toExponential(x) Number对象方法：&quot; + numberObject.toExponential(1));numberObject = 12.54console.log(&quot;toFixed() Number对象方法：&quot; + numberObject.toFixed(0));console.log(&quot;toPrecision() Number对象方法：&quot; + numberObject.toPrecision(3));console.log(&quot;toString() Number对象方法：&quot; + numberObject.toString());console.log(&quot;valueOf() Number对象方法：&quot; + numberObject.valueOf());]]></content>
