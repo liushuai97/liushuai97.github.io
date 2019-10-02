@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Browser对象 Window对象属性与方法]]></title>
+    <url>%2F2019%2F10%2F02%2FBrowser%E5%AF%B9%E8%B1%A1-Window%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[window对象，BOM的核心对象是window。它表示浏览器的一个实例。在浏览器总，window对象有双重角色，它既是通过JavaScript访问浏览器窗口的一个接口，又是ECMAScript规定的Global对象。window对象表示浏览器中打开的窗口。如果问到包含框架（frame或iframe标签），浏览器会为HTML文档创建一个window对象，并未每个框架创建一个额外的window对象。window对象集合，frames[],返回窗口中所有命名的框架。该集合是window对象的数组，每个window对象在窗口中含有一个框架或&lt;iframe&gt;&lt;/iframe&gt;。属性frames.length存在数组frames[]中含有的元素个数。window对象属性属性描述closed返回窗口是否已被关闭。defaultStatus设置或返回窗口状态栏中的默认文本。document对Document对象的只读引用。history对History对象的只读引用。innerheight返回窗口的文档显示区的高度。innerwidth返回窗口的文档显示区的宽度。length设置或返回窗口中的框架数量。location用于窗口或框架的Location对象。name设置或返回窗口的名称。Naviagtor对Navigator对象的只读引用。opener返回对创建此窗口的窗口的引用。outerheight返回窗口的外部高度。outerwidth返回窗口的外部宽度。pageXOffset设置或返回当前页面相对于窗口显示区左上角的X位置。pageYOffset设置或返回当前页面相对于窗口显示区左上角的Y位置。parent返回父窗口。Screen对Screen对象的只读引用。self返回对当前窗口的引用。等价于window属性。status返回窗口状态栏的文本。top返回最顶层的先辈窗口。windowwindow属性等价于self属性，它包含了对窗口自身的引用。screenLeft只读整数。声明了窗口的左上角在屏幕上的x坐标和y坐标。IE、Safari和Opera支持screenLeft和screenRight，而FireFox和Safari支持screenX和screenY.window对象方法方法描述alert()显示带有一段消息和一个确认按钮的警告框。blur()把键盘焦点从顶层窗口移开。clearInterval()取消由setInterval()设置的timeout。clearTimeout()取消由setTimeout()方法设置的timeout。close()关闭浏览器窗口。confirm()显示带有一段消息以及确认按钮和取消按钮的对话框。createPopup()创建一个pop-up窗口。focus()把键盘焦点给与一个窗口。moveBy()可相对窗口的当前坐标把它移动指定的像素。moveTo()把窗口的左上角移动到一个指定的坐标。open()打开一个新的浏览器窗口或查找一个已命名的窗口。print()打印当前窗口的内容。prompt()显示课题是用户输入的对话框。resizeBy()按照指定的像素调整窗口的大小。resizeTo()把窗口的大小调整到指定的宽度和高度。scrollBy()按照指定的像素值来滚动内容。scrollTo()把内容滚动到指定的坐标。setInterval()按照指定的周期（以毫秒计）来调用函数或计算表达式。setTimeout()在指定的毫秒数后调用函数或计算表达式。]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript Events事件句柄]]></title>
     <url>%2F2019%2F09%2F30%2FJavaScript-Events%E4%BA%8B%E4%BB%B6%E5%8F%A5%E6%9F%84%2F</url>
     <content type="text"><![CDATA[事件通常与函数配合使用，这样就可以通过发生的事件来驱动函数执行。事件句柄HTML 4.0 的新特性之一是有能力使 HTML 事件触发浏览器中的动作（action），比如当用户点击某个 HTML 元素时启动一段 JavaScript。下面是一个属性列表，这些属性可插入 HTML 标签来定义事件动作。属性当以下情况发生时，出现此事件onabort图像加载被中断onblur元素失去焦点onchange用户改变域的内容onclick鼠标点击某个对象ondblclick鼠标双击某个对象onerror当加载文档或图像时发生某个错误onfocus元素获得焦点onkeydown某个键盘的键被按下onkeypress某个键盘的键被按下或按住onkeyup某个键盘的键被松开onload某个页面或图像被完成加载onmousedown某个鼠标按键被按下onmousemove鼠标被移动onmouseout鼠标从某元素移开onmouseover鼠标被移到某元素之上onmouseup某个鼠标按键被松开onreset重置按钮被点击onresize窗口或框架被调整尺寸onselect文本被选定onsubmit提交按钮被点击onunload用户退出页面]]></content>
