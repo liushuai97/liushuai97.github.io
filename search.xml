@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Browser对象 Location对象属性与方法]]></title>
+    <url>%2F2019%2F10%2F02%2FBrowser%E5%AF%B9%E8%B1%A1-Location%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[location是最有用的BOM对象之一，它提供了与当前窗口中加载的文档有关的信息，还提供了一些导航功能。事实上，location对象是很特别的一个对象，因为它既是window对象的属性，也是document对象的属性；换句话说，window.location和document.location引用的是同一个对象。location对象的用处不只表现在它保存着当前文档的信息，还表现在它将URL解析为独立的片段，让开发人员可以通过不同的属性访问这些片段。location对象属性属性描述hash设置会返回从#号开始的URL（锚）。host设置或返回主机名和当前URL的端口号。hostname设置或返回当前URL的主机名。href设置或返回完整的URL。pathname设置或返回当前URL的路径部分。port设置或返回当前URL的端口号。protocol设置或返回当前URL的协议。search设置或返回从问号（?）开始的URL（查询部分）。location对象方法方法描述assign()加载新的文档reload()重新加载当前文档replace()用新的文档替换当前文档。]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Browser对象 History对象属性与方法]]></title>
+    <url>%2F2019%2F10%2F02%2FBrowser%E5%AF%B9%E8%B1%A1-History%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[History对象，History对象包含用户（在浏览器窗口中）访问过的URL。History对象是window对象的一部分，可通过window.history属性对其进行访问。注释：没有应用History对象的公开标准，不过所有浏览器都支持该对象。History对象保存着用户上网的历史记录，从窗口被打开的那一刻算起。因为history是window对象的属性，因此每个浏览器窗口、每个标签页乃至每个框架，都有自己的history对象与特定的window对象关联。处于安全方面的考虑，开发人员无法得知用户浏览过的URL。不过借由用户访问过的页面立碑，同样可以在不知道实际URL的情况下实现后退和前进。History对象属性属性描述length返回浏览器历史列表中URL数量。History对象方法方法描述back()加载history列表中的前一个URL。forward()加载history列表中的下一个URL。go()加载history列表中的某个具体页面。]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Browser对象 Screen对象属性与方法]]></title>
+    <url>%2F2019%2F10%2F02%2FBrowser%E5%AF%B9%E8%B1%A1-Screen%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[JavaScript中有几个对象在变成汇总用处不大，而screen对象就是其中之一。screen对象基本上只用来表明客户端的能力，其中包括浏览器窗口外部的显示器的信息，如像素宽度和高度等。每个浏览器中的screen对象都包含各不相同的属性。Screen对象Screen对象包含有关客户端显示屏幕的信息。注释：没有应用于screen对象的公开标准，不过所有浏览器都支持该对象。Screen对象属性属性描述availHeight返回显示屏幕的高度（除windows任务栏之外）。availWidth返回显示屏幕的宽度（除windows任务栏之外）。bufferDepth设置或返回调色板的比特深度。colorDepth返回目标设备或缓冲器上的调色板的比特深度。deviceXDPI返回显示屏幕的每英寸水平点数。deviceYDPI返回显示屏幕的每英寸垂直点数。fontSmoothingEnabled返回用户是否在显示控制面板中启用字体平滑。height返回显示屏幕的高度。logicalXDPI返回显示屏幕每英寸的水平方向的常规点数。logicalYDPI返回显示屏幕每英寸的垂直方向的常规点数。pixelDepth返回显示屏幕的颜色分辨率（比特每像素）。updateInterval()设置或返回屏幕的刷新率。width返回显示器屏幕的宽度。Screen对象描述，每个window对象的screen属性都引用一个screen对象。screen对象中存放着显示浏览器屏幕的信息。JavaScript程序将利用这些信息来优化他们的输出，已达到用户的显示要求。]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Browser对象 Navigator对象属性与方法]]></title>
     <url>%2F2019%2F10%2F02%2FBrowser%E5%AF%B9%E8%B1%A1-Navigator%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[navigator对象，navigator对象包含有关浏览器的信息。注释：没有应用于navigator对象的公开标准，不过所有浏览器都支持该对象。Navigator对象集合，plugins[],返回对文档中所有嵌入式对象的引用。该集合是一个Plugin对象的数组，其中的元素代表浏览器已经安装的插件。Plug-in对象提供的是有关插件的信息，其中包括它所支持的MIME类型的列表。虽然plugins[]数组是有IE4定义的，但是在IE4中它却总是空的，因为IE4不支持插件和Plugin对象。Navigator对象属性属性描述appCodeName返回浏览器的代码名。appMinorVersion返回浏览器的次级版本。appName返回浏览器的名称。appVersion返回浏览器的平台和版本信息。browserLanguage返回当前浏览器的语言。cookieEnabled返回指明浏览器中是否启用cookie的布尔值。cpuClass返回浏览器系统的CPU等级。onLine返回指明系统是否处于脱机模式的布尔值。platform返回运行浏览器的操作系统平台。systemLanguage返回OS使用的默认语言。userAgent返回由客户机发送服务器的user-agent头部的值。userLanguage返回OS的自然语言设置。Naviagtor对象方法方法|描述:-:|-javaEnabled()|规定浏览器是否启用Java。tainEnabled()|规定浏览器是否启动数据污点(data tainting)。]]></content>
