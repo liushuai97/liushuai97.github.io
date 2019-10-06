@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[HTML DOM Document 对象属性与方法]]></title>
+    <url>%2F2019%2F10%2F06%2FHTML-DOM-Document-%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[Document对象每个载入浏览器的HTML文档都会成为Document对象。Document对象使我们可以从脚本中对HTML页面中的所有元素进行访问。提示：Document对象是Window对象的一部分，可通过window.document舒心对其进行访问。Document对象集合集合描述all[]提供对文档中所有 HTML 元素的访问。anchors[]返回对文档中所有 Anchor 对象的引用。applets返回对文档中所有 Applet 对象的引用。forms[]返回对文档中所有 Form 对象引用。images[]返回对文档中所有 Image 对象引用。links[]返回对文档中所有 Area 和 Link 对象引用。Document 对象属性属性描述body提供对 &lt;body&gt; 元素的直接访问。对于定义了框架集的文档，该属性引用最外层的。cookie设置或返回与当前文档有关的所有 cookie。domain返回当前文档的域名。lastModified返回文档被最后修改的日期和时间。referrer返回载入当前文档的文档的 URL。title返回当前文档的标题。URL返回当前文档的 URL。Document 对象方法方法描述close()关闭用 document.open() 方法打开的输出流，并显示选定的数据。getElementById()返回对拥有指定 id 的第一个对象的引用。getElementsByName()返回带有指定名称的对象集合。getElementsByTagName()返回带有指定标签名的对象集合。open()打开一个流，以收集来自任何 document.write() 或 document.writeln() 方法的输出。write()向文档写 HTML 表达式 或 JavaScript 代码。writeln()等同于 write() 方法，不同的是在每个表达式之后写一个换行符。]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Browser对象 Location对象属性与方法]]></title>
     <url>%2F2019%2F10%2F02%2FBrowser%E5%AF%B9%E8%B1%A1-Location%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[location是最有用的BOM对象之一，它提供了与当前窗口中加载的文档有关的信息，还提供了一些导航功能。事实上，location对象是很特别的一个对象，因为它既是window对象的属性，也是document对象的属性；换句话说，window.location和document.location引用的是同一个对象。location对象的用处不只表现在它保存着当前文档的信息，还表现在它将URL解析为独立的片段，让开发人员可以通过不同的属性访问这些片段。location对象属性属性描述hash设置会返回从#号开始的URL（锚）。host设置或返回主机名和当前URL的端口号。hostname设置或返回当前URL的主机名。href设置或返回完整的URL。pathname设置或返回当前URL的路径部分。port设置或返回当前URL的端口号。protocol设置或返回当前URL的协议。search设置或返回从问号（?）开始的URL（查询部分）。location对象方法方法描述assign()加载新的文档reload()重新加载当前文档replace()用新的文档替换当前文档。]]></content>
