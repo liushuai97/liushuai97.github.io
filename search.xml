@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ES6 作用域]]></title>
+    <url>%2F2019%2F10%2F17%2FES6-%E4%BD%9C%E7%94%A8%E5%9F%9F%2F</url>
+    <content type="text"><![CDATA[什么是作用域？任何编程语言都有作用域的概念，简单来说，作用域就是变量与函数的可访问范围，即作用域控制着变量与函数的可见性和生命周期。JavaScript的作用域是靠函数来形成的，也就是说一个函数的变量在函数外不可以访问。全局作用域任何地方都能访问到的对象拥有全局作用域。函数外面定义的变量拥有全局作用域123456789var n = 2;function fn()&#123; var a = 1; return a;&#125;console.log(fn()); // 1console.log(n); // 2console.log(a); //报错 a is not defined未定义直接赋值的变量自动声明为拥有全局作用域123456789var n = 2;function fn()&#123; a = 1; return a;&#125;console.log(fn()); // 1console.log(n); // 2console.log(a); // 1window对象的属性拥有全局作用局部作用域局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部，所以在一些地方会把这种作用域成为函数作用域。1234567891011var n = 2;function fn()&#123; var a = 1; return a;&#125;console.log(fn()); // 1console.log(n); // 2console.log(a); //报错 a is not defined// a是函数内部声明并赋值，拥有局部作用域，只能带函数fn内部使用，在fn外部使用就会报错，这就是局部作用域的特性，外部无法访问。作用域链通俗的讲，当声明一个函数时，局部作用域一级一级向上包起来，就是作用域链。当执行函数时，总是先从函数内部找寻局部变量。如果内部找不到（函数的局部作用域没有），则会向创建函数的作用域（声明函数的作用域）寻找，一次向上。123456789101112131415161718var a = 1;function fn()&#123; var a = 10; function fn1()&#123; var a = 20; console.log(a); // 20 &#125; function fn2()&#123; console.log(a); // 10 &#125; fn1(); fn2();&#125;fn();console.log(a) // 1闭包提到作用域就不得不提到闭包，简单来讲，闭包外部函数能够读取内部函数的变量。优点：闭包可以形成独立的空间，永久的保存局部变量。缺点：保存中间值的状态缺点是容易造成内存泄漏，因为闭包中的局部变量永远不会被回收。123456789101112131415function f1() &#123; var n = 999; nAdd = function () &#123; n += 1; &#125; function f2() &#123; console.log(n); &#125; return f2;&#125;var result = f1();result(); // 999nAdd(); // 执行 n += 1result(); // 1000ES6的块级作用域ES6引入了块级作用域，明确允许在块级作用域中声明函数，let和const命令都涉及块级作用域。块级作用域允许声明函数只在使用大括号的情况下成立，如果未使用大括号，会报错。123456789101112131415161718192021222324252627// ES5 中作用域var callbacks = []for (var i = 0; i &lt;= 2; i++) &#123; callbacks[i] = function() &#123; return i * 2 &#125;&#125;console.table([ callbacks[0](), callbacks[1](), callbacks[2](),])// ES6中块级作用域const callbacks2 = []for (let j = 0; j &lt;= 2; j++) &#123; callbacks2[j] = function() &#123; return j * 2 &#125;&#125;console.table([ callbacks2[0](), callbacks2[1](), callbacks2[2](),])]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+      <tags>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ES6 常量]]></title>
     <url>%2F2019%2F10%2F16%2FES6-%E5%B8%B8%E9%87%8F%2F</url>
     <content type="text"><![CDATA[我们都知道一个程序的运行过程主要分为三个步骤：编译-&gt;链接-&gt;执行，传统OO语言里还有两个重要特性就是静态和常量。但在ES6之前是没有常量这个定义的，只有所谓的变量，也就是表示一些经常变化的数据。什么是常量？常量，表示是一些固定不变的数据。123456789101112131415// ES5 中常量的写法，自定义的常量通常用大写字母，但这只是一种约定，无意中改了也不易发现。如果没必要做的这么严谨，或团队对这潜规则都心知肚明，那用大写字母就OK了。Object.defineProperty(window, &quot;PI2&quot;, &#123; value: 3.1415926, writable: false,&#125;)console.log(window.PI2)// ES6 的常量写法const PI = 3.1415926console.log(PI)// PI = 4]]></content>
