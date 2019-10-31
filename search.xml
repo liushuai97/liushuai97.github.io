@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript-自测题13]]></title>
+    <url>%2F2019%2F10%2F31%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%9813%2F</url>
+    <content type="text"><![CDATA[123456789&#123; function test()&#123; var a = &quot;yideng&quot;; return function()&#123; eval(&quot;&quot;) &#125; &#125; test()();&#125;运行结果：没有被GC回收解析：eval(“”)改变了词法作用域，影响了执行上下文，导致a无法回收，但是又没有引用，所以形成野指针]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript-自测题12]]></title>
+    <url>%2F2019%2F10%2F31%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%9812%2F</url>
+    <content type="text"><![CDATA[123456789101112131415&#123; function fn()&#123; console.log(this.length); &#125; var yideng = &#123; length: 5, method: function()&#123; &quot;use strict&quot;; fn(); arguments[0](); &#125; &#125; const result = yideng.method.bind(null); result(fn,1,3);&#125;运行结果：1213解析：fn() this指向window this.length指向iframe为1arguments[0] 调用fn()，此时this指向arguments，this.length就是3附加题：12345678910&#123; function yideng(a,b,c)&#123; console.log(this.length); console.log(this.callee.length); &#125; function fn(d)&#123; arguments[0](10,20,30,40,50); &#125; fn(yideng,10,20,30);&#125;运行结果：1241解析：fn(yideng,10,20,30) 调用yideng() this指向arguments this.length为4this.callee.length指向fn(d)为1]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript-自测题11]]></title>
     <url>%2F2019%2F10%2F31%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%9811%2F</url>
     <content type="text"><![CDATA[1234567891011121314151617181920&#123; console.log(a); console.log(typeof yideng(a)); var flag = true; if(!flag)&#123; var a = 1; &#125; if(flag)&#123; function yideng(a)&#123; yideng = a; console.log(&apos;yideng1&apos;); &#125; console.log(typeof yideng(a)); &#125; else &#123; function yideng(a) &#123; yideng = a; console.log(&apos;yideng2&apos;); &#125; &#125;&#125;运行结果：12undefinedyideng is not a function解析：a声明未赋值yideng()被限制在块级作用域内，无法检测类型]]></content>
