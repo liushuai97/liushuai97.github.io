@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JSX基本语法]]></title>
+    <url>%2F2019%2F11%2F13%2FJSX%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[123456789101112131415161718192021222324import React from &apos;react&apos;;import ReactDOM from &apos;react-dom&apos;;import &apos;./index.scss&apos;let style = &#123;&#125;;let name = &apos;Li&apos;;let names = [&apos;张三&apos;,&apos;李四&apos;,&apos;王五&apos;];let flag = false;let jsx = (&lt;div className=&quot;jsx&quot; style=&#123;style&#125;&gt; &#123;/* 条件判断 */&#125; &#123; flag ? &lt;p&gt;i am &#123;name&#125;&lt;/p&gt; : &lt;p&gt;i am not &#123;name&#125;&lt;/p&gt; &#125; &#123;/* 变量使用 */&#125; jsx...&#123;name&#125; &#123;/* 数组循环 */&#125; &#123; names.map((name, index)=&gt; &lt;p key=&#123;index&#125;&gt;i am &#123;name&#125;&lt;/p&gt;) &#125; &lt;/div&gt;);ReactDOM.render(jsx,document.getElementById(&apos;app&apos;));]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[浏览器本地存储]]></title>
     <url>%2F2019%2F11%2F13%2F%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%2F</url>
     <content type="text"><![CDATA[1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162&#123; // 本地存储 // cookie // 用户端保存请求信息的机制 // 分号分隔的多个key-value字段 // 存储在本地的加密文件里 // 域名和路径的限制 // name:cookie 名称 // domain:cookie 生效的域名 // path: cookie 生效的路径 // expires: cookie 过期时间 // HttpOnly: 用户端不可更改 // 浏览器端查看cookie document.cookie // cookie添加 document.cookie = &apos;name=Reson;domain=happymmall.com;path=/index.html;expires:Wed, 13 Nov 2020 01:44:49 GMT&apos; // cookie修改 document.cookie = &apos;name=Reson1;domain=happymmall.com;path=/index.html&apos; // cookie删除 设定过期时间 document.cookie = &apos;name=Reson1;domain=happymmall.com;path=/index.html;expires:Wed, 13 Nov 2008 01:44:49 GMT&apos; // session // 服务端保存请求信息的机制 // sessionld通常存放在cookie里 // 会话由浏览器控制，会话结束，session失效 // localStorage // H5新特性 // 有域名限制，不存在作用域概念 // 只有key-value // 没有过期时间 // 浏览器关闭后不消失 // 添加localStorage window.localStorage.setItem(&apos;name&apos;,&apos;Rosen&apos;); window.localStorage.setItem(&apos;name&apos;,JSON.stringify(&#123;name: &apos;Rosen&apos;&#125;)); // 查看localStorage window.localStorage.getItem(&apos;name&apos;); // 删除localStorage window.localStorage.removeItem(&apos;name&apos;); // sessionStorage // 和localStorage极其相似 // 浏览器关闭后消失 // 添加localStorage window.sessionStorage.setItem(&apos;name&apos;,&apos;Rosen&apos;); window.sessionStorage.setItem(&apos;name&apos;,JSON.stringify(&#123;name: &apos;Rosen&apos;&#125;)); // 查看localStorage window.sessionStorage.getItem(&apos;name&apos;); // 删除localStorage window.sessionStorage.removeItem(&apos;name&apos;);&#125;]]></content>
