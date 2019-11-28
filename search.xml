@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript-自测题20]]></title>
+    <url>%2F2019%2F11%2F28%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%9820%2F</url>
+    <content type="text"><![CDATA[1234567891011121314151617181920212223var s = [];var arr = s;for(var i = 0; i &lt; 3; i++)&#123; var pusher = &#123; value: &quot;item&quot; + i &#125;,tmp; // i = 0 // pusher = &#123;value: &quot;item0&quot;&#125; // tmp.children = &#123;value: &quot;item0&quot;&#125; // arr = &#123;value: &quot;item0&quot;&#125; // s[0] = &#123;value: &quot;item0&quot;,children:[&#123;value:&quot;item0&quot;&#125;]&#125; if(i !== 2)&#123; tmp = []; pusher.children = tmp; &#125; arr.push(pusher); arr = tmp;&#125;console.log(s[0]);技术点：指针移动]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript-自测题19]]></title>
+    <url>%2F2019%2F11%2F28%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%9819%2F</url>
+    <content type="text"><![CDATA[什么是PromisePromise是抽象异步处理对象以及对其进行各种操作的组件，其实Promise就是一个对象，用来传递异步操作的消息，它不是某门语言特有的属性，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象，Promise对象有以下两个特点:对象的状态不受外界影响一旦状态改变，就不会再变，任何时候都可以得到这个结果Promise也以下缺点:无法取消Promise，一旦新建它就会立即执行，无法中途取消。如果不设置回调函数，Promise内部抛出的错误，不会反应到外部。当处于Pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。Promise/A+规范的PromisePromise/A+是Promise的一个主流规范，浏览器,node和JS库依据此规范来实现相应的功能，以此规范来实现一个Promise也可以叫做实现一个Promise/A+。类和构造器的构建Promise.prototype.then链式支持静态方法Promise.resolve静态方法Promise.reject静态方法Promise.all1234/*** all方法，可以传入多个promise，全部执行完后会将结果以数组的方式返回，如果有一个失败就返回失败* 静态方法为类自己的方法，不在原型链上*/静态方法Promise.race12345事务/*** race方法，可以传入多个promise，返回的是第一个执行完的resolve的结果，如果有一个失败就返回失败* 静态方法为类自己的方法，不在原型链上*/12345678910111213141516171819202122const pro = new Promise((resolve, reject) =&gt; &#123; const innerpro = new Promise((resolve, reject) =&gt; &#123; setTimeout(() =&gt; &#123; resolve(1); &#125;) console.log(2); resolve(3); &#125;) innerpro.then(res =&gt; console.log(res)); resolve(4); console.log(&quot;yideng&quot;);&#125;)pro.then(res =&gt; console.log(res));console.log(&quot;end&quot;);解析：优先执行内部嵌套的new Promise，console.log(2) 然后执行console.log(&quot;yideng&quot;)pro.then等待先执行console.log(&quot;end&quot;)然后执行嵌套内部的resolve(3)在执行外部的resolve(4)]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript-自测题18]]></title>
+    <url>%2F2019%2F11%2F28%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%9818%2F</url>
+    <content type="text"><![CDATA[1234567891011121314151617181920212223请问点击&lt;button id=&quot;test&quot;&gt;&lt;/button&gt;会有什么反应？为什么？能解决吗？$(&quot;#test&quot;).click(function(argument)&#123; console.log(1); 控制台打印1&#125;);setTimeout(function()&#123; console.log(2); // 2 立即执行控制台打印2&#125;,0);while(true)&#123; console.log(Math.random()); //返回随机数&#125;解析：优先执行while 无限循环 后面无法执行技术点：在JS单线程的时候如何模拟多线程操作解决：1. 让出CPU时间，setTimeout延迟执行2. web worker 独立线程开放（无法执行DOM操作，只允许纯计算）3. 并发库Concurrent.Thread.js 实现原理时间切片]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript-自测题17]]></title>
+    <url>%2F2019%2F11%2F27%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%9817%2F</url>
+    <content type="text"><![CDATA[请解释babel编译后的async原理1234567let a = 0;let yideng = async () =&gt; &#123; a = a + await 10; console.log(a) // 10&#125;yideng();console.log(++a); // 1async/await在async/await之前，我们有三种方式写异步代码：嵌套回调以Promise为主的链式回调使用Generatorsasync特点async/await更加语义化，async 是“异步”的简写，async function 用于申明一个 function 是异步的；await，可以认为是async wait的简写， 用于等待一个异步方法执行完成；async/await是一个用同步思维解决异步问题的方案（等结果出来之后，代码才会继续往下执行）可以通过多层async function的同步写法代替传统的callback嵌套async function语法自动将常规函数转换成Promise，返回值也是一个Promise对象只有async函数内部的异步操作执行完，才会执行then方法指定的回调函数异步函数内部可以使用await12345async function name([param[, param[, ... param]]]) &#123; statements &#125;name: 函数名称。param: 要传递给函数的参数的名称statements: 函数体语句。返回值: 返回的Promise对象会以async function的返回值进行解析，或者以该函数抛出的异常进行回绝。await语法await放置在Promise调用之前，await强制后面点代码等待，知道Promise对象resolve，得到resolve的值作为await表达式的运算结果await只能在async函数内部使用，用在普通函数里就会报错123[return_value] = await expression;expression: 一个 Promise 对象或者任何要等待的值。返回值:返回 Promise 对象的处理结果。如果等待的不是 Promise 对象，则返回该值本身。错误处理在async函数里，无论是Promise reject的数据还是逻辑报错，都会被默默吞掉,所以最好把await放入try{}catch{}中，catch能够捕捉到Promise对象rejected的数据或者抛出的异常。12345678910111213141516function timeout(ms) &#123; return new Promise((resolve, reject) =&gt; &#123; setTimeout(() =&gt; &#123;reject(&apos;error&apos;)&#125;, ms); //reject模拟出错，返回error &#125;);&#125;async function asyncPrint(ms) &#123; try &#123; console.log(&apos;start&apos;); await timeout(ms); //这里返回了错 console.log(&apos;end&apos;); //所以这句代码不会被执行了 &#125; catch(err) &#123; console.log(err); //这里捕捉到错误error &#125;&#125;asyncPrint(1000);如果不用try/catch的话，也可以像下面这样处理错误（因为async函数执行后返回一个promise）123456789101112131415function timeout(ms) &#123; return new Promise((resolve, reject) =&gt; &#123; setTimeout(() =&gt; &#123;reject(&apos;error&apos;)&#125;, ms); //reject模拟出错，返回error &#125;);&#125;async function asyncPrint(ms) &#123; console.log(&apos;start&apos;); await timeout(ms) console.log(&apos;end&apos;); //这句代码不会被执行了&#125;asyncPrint(1000).catch(err =&gt; &#123; console.log(err)； // 从这里捕捉到错误&#125;);使用场景多个await命令的异步操作，如果不存在依赖关系（后面的await不依赖前一个await返回的结果），用Promise.all()让它们同时触发12345678910111213141516171819202122232425262728293031function test1 () &#123; return new Promise((resolve, reject) =&gt; &#123; setTimeout(() =&gt; &#123; resolve(1) &#125;, 1000) &#125;)&#125;function test2 () &#123; return new Promise((resolve, reject) =&gt; &#123; setTimeout(() =&gt; &#123; resolve(2) &#125;, 2000) &#125;)&#125;async function exc1 () &#123; console.log(&apos;exc1 start:&apos;,Date.now()) let res1 = await test1(); let res2 = await test2(); // 不依赖 res1 的值 console.log(&apos;exc1 end:&apos;, Date.now())&#125;async function exc2 () &#123; console.log(&apos;exc2 start:&apos;,Date.now()) let [res1, res2] = await Promise.all([test1(), test2()]) console.log(&apos;exc2 end:&apos;, Date.now())&#125;exc1();exc2();例题：123456789101112131415161718async function async1()&#123; console.log(1) // 1 await async2(); console.log(3) // 3&#125;async function async2()&#123; console.log(2)&#125;async1(); // 2console.log(4) // 4解析：优先执行 console.log(1);await async2() 执行函数 存在立即执行内容 console.log(2)强制等待...执行console.log(4)继续执行console.log(3)]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Nodejs项目架构和优化]]></title>
+    <url>%2F2019%2F11%2F27%2FNodejs%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E5%92%8C%E4%BC%98%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>Nodejs</category>
+      </categories>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HTTP协议（下）]]></title>
     <url>%2F2019%2F11%2F27%2FHTTP%E5%8D%8F%E8%AE%AE%EF%BC%88%E4%B8%8B%EF%BC%89%2F</url>
     <content type="text"><![CDATA[密码学入门密码学的处理对象是数字和字符串。散列是一种数据一旦转换为其他形式将永远无法恢复的加密技术，例如：MD5加密：对称加密（AES、DES、3DES）非对称加密（RSA）密钥交换算法Diffie-Hellman算法是一种注明的密钥协商算法，这种算法可以使得信息交换的双方通过公开的非安全的网络协商生成安全的共享密钥Alice与Bob确定两个大素数n和g，这两个数不用保密Alice选择另一个大随机数x，并计算A如下：A=gx mod nAlice将A发给BobBob选择另一个大随机数y，并计算B如下：B=gy mod nBob将B发给Alice计算秘密密钥K1如下：K1= Bx mod n计算秘密密钥K2如下：K2= Ag mod nK1-K2，因此Alice和Bob可以用其进行加解密证书签发机构（CA）CA： CA（certification authority）是数字证书的签发机构，作为权威机构哦，其审核申请者身份后签发数字证书，这样我们只需要效验数字证书即可确定对方的真实身份。CA的工作流程：服务器example.com将CA请求TLS证书，例如DigiCerDigiCert将为example.com创建证书，证书将包含必要的数据，例如服务器名称，服务器的公钥等。DigiCert将创建数据（证书）的哈希值，并使用自己的私钥对其进行加密。浏览器和操作系统自带DigiCert等权威机构的公钥当浏览器收到签名证书时，它将使用公钥从签名生成哈希值，它还将使用证书中指定的散列算法生成数据（证书）的散列。如果两个哈希值匹配，则签名验证成功并且证书是可信的。现在浏览器可以使用证书中指定的example.com的公钥继续进行身份验证过程。在这里，我们可以将DigiCert称为Root CA浏览器如何验证服务器证书的有效性证书颁发机构是为服务器创建并签署证书，很少有组织从事这项工作，即DigiCert、Geotrust、Comodo等。如果他们正在为所有服务器签署证书，则必须为所有签名使用相同的私钥，如果它被盗，那么所有的信任都会丢失。为了解决这个问题并增加更多的平均信息量，引入了中间(CAintermediate CA)的概念。服务器使用中级证书颁发机构的签名，因此，在于浏览器通信时，服务器将共享两个证书：包含服务器的公钥，即实际的服务器证书；由Root CA颁发的intermediate CA证书。在签名验证期间，浏览器首先使用已经存储在浏览器中的Root CA 的公钥来验证中检证书的数字签名，如果成功，浏览器现在可以信任中间证书及其公钥。现在使用此公钥、浏览器将验证原始服务器证书的签名，该组织可以注册为intermediate CA，以便为其域签署证书。SSL/TLS协议传输层安全性协议（TLS），及其前身安全套阶层(SSl)是一种安全协议，目的是为互联网通信提供安全及数据完整性保障。HTTPS协议的安全性由SSL协议实现，当前使用的TLS协议1.2版本包含了四个核心子协议：握手协议、密钥配置切换协议、应用数据协议及报警协议.TLS适用于对称密钥对称密钥可以通过安全密钥交换算法共享如果请求被截获，密钥交换可能会被欺骗使用数字签名进行身份验证证书颁发机构和信任链HTTPS协议、SSL协议、TLS协议、握手协议的关系HTTPS即HTTP over SSL，可理解为基于SSL的HTTP协议。HTTPS协议安全是由SSL协议实现的。SSL协议是一种记录协议，扩展性良好，可以很方便的添加子协议。握手协议是SSL协议的一个子协议TLS协议是SSL协议的后续版本HTTPS协议分析TLS握手的步骤HTTPS的协议本质上就是在HTTP协议连接发起之前，先使用SSL/TLS协议，协调客户端和服务器端，在两端各自产生一个堆成加密算法的秘钥，然后以RSA（对之前生成的秘钥进行非对称加密）的方式安全地传输数据。因为对称加密算法是安全的，所以使用对称加密算法加密的网页也是安全的。HTTPS非对称加密算法(对称加密算法的秘钥，RSA) + 对称加密算法(加密内容，DES) + 数字证书(防止篡改非对称加密算法的公钥，CA) + HASH算法(防止篡改消息，MD5/SHA1)HTTPS 结合使用了 非对称加密算法，对称加密算法，hash算法，分别利用他们的优势，避免他们的缺点。利用非对称加密算法获得对称加密算法的秘钥，保证他的安全性；然后实际的网页内容的加密使用的是对称加密算法，利用了对称加密算法速度快的优势，hash算法主要是防止篡改的发生，是一种校验机制，最后数字证书，保证了服务器在将非对称加密算法的公钥传给浏览器时的安全性(不会被中间人篡改)，同时也标志了服务器的身份。HTTP2协议分析HTTP/2没有改动HTTP的应用语义。HTTP方法、状态代码、URI和标头字段等核心概念一如往常。HTTP/2修改数据格式化（分帧）以及在客户端与服务器间传输的方式。这两点统帅全局，通过新的分帧层向我们应用隐藏了所有复杂性。由于HTTP/2引入了一个新的二进制分帧层，该层无法与之前的HTTP/1.x服务器和客户端向后兼容，因此协议的主版本提升到HTTP/2。HTTP2的特点：使用二进制格式传输、更高效、更紧凑对报头压缩、降低开销多路复用、一个网络连接实现并行请求。服务器主动推送，减少请求的延迟默认使用加密HTTP2 二进制分帧HTTP/2所有性能增强的核心在于新的二进制分帧层，它定义了如何封装HTTP消息并在客户端与服务器端之间传输。这里所谓的“层”指的是为套接字接口与应用可见的高级HTTP API之间一个经过优化的新编码机制。HTTP/1.x协议以换行符作为纯文本的分隔符，而HTTP/2将所有传输的信息风格为更小的消息和帧，并采用二进制格式对他们编码。客户端和服务器会替我们完成必要的分帧工作。HTTP2 多路复用在HTTP/1.x中，如果客户端想法器多个并行请求以提升性能，则必须使用多个TCP连接。这种模型也会导致队首阻塞，从而造成底层TCP连接的效率低下。将HTTP消息分解为独立的帧，交错发送，然后再另一端重新组装是HTTP2最重要的一项增强，这个机制会在整个网络技术栈中引发一系列连锁反应，而从带来巨大的性能提升。并行交错地发送多个请求，请求之间互不影响。并行交错地发送多个响应，响应之间互不干扰使用一个连接并行发送多个请求和响应。不必再为绕过HTTP/1.x限制而做更多工作。消除不必要的延迟和提高现有网络容量的利用率，从而减少页面加载时间。HTTP2 服务器推送HTTP/2新增的另一个强大的新功能，是服务器可以对一个客户端请求发送多个响应，换句话说，除了对最初请求的响应外，服务器还可以向客户端推送额外资源，而无需客户明确地请求。HTTP/2打破了严格的请求-响应语义，支持一对多和服务器发起的推送工作流。服务器已经知道客户端下一步要请求什么资源，这时候服务器推送即可派上用场。推送资源可以进行以下处理：由客户端缓存在不同页面之间重用与其他资源一起复用由服务器设定优先级被客户端拒绝HTTP2的伪头字段伪头部字段是HTTP2内置的几个特殊的以“:”开始的key，用于替换HTTP/1.x中请求行/响应行中的信息，比如请求方法，响应状态码等:method 目标URL模式部分（请求）:scheme 目标URL模式部分（请求）:authority 目标URL认证部分（请求）:path 目标URL的路径和查询部分（绝对路径产生式和一个跟着“?”字符的查询产生式）（请求）:status 响应头中的HTTP状态码部分（响应）了解HTTP3运行在QUIC智商的HTTP协议被称为HTTP/3 （HTTP-over-QUIC）QUIC协议基于UDP，正式看中了UDP的速度和效率，同事QUIC业整合了TCP、TLS和HTTP/2的有点，并加以优化。特点：减少了握手的延迟（1-RTT或0-RTT）多路复用、并且没有TCP的阻塞问题连接迁移、（主要是客户端）当由wifi转移到4G时，连接不会断开。HTTP3与HTTP1.1和HTTP2没有直接关系，也不是HTTP2的扩展HTTP3将会是一个全新的WEB协议HTTP3目前处于制订和测试阶段对首阻塞问题HTTP/1.1和HTTP/2都存在对头阻塞问题HTTP/2必须使用HTTPS，而HTTPS使用的TLS协议也存在对首阻塞问题。QUIC解决队首阻塞问题的方法：QUIC的传输单元式Packet，加密单元也是Packet，整个加密、传输、解密都基于Packet，这样就能避免TLS的队首阻塞问题QUIC基于UDP，UDP的数据包在接收端没有处理顺序，及时中间丢失一个包，也不会阻塞整条连接，其他资源会被正常处理。HTTP与反向代理反向代理的用途加密和SSL加速负载均衡缓存静态内容压缩减速上传安全外网发布Nginx: http://shouce.jb51.net/nginx/left.html]]></content>
