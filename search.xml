@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[服务器免密登录]]></title>
+    <url>%2F2019%2F11%2F29%2F%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[生成密钥本地客户端生成公私钥 ssh-keygen客户端配置~/.ssh vim config12345678910111213141516171819202122# config文件配置# 多主机配置Host name1-pHostName 服务器主机公网IP地址Port 默认22端口Host nam2-pHostName 服务器主机公网IP地址Port 6666Host nam3-pHostName 服务器主机公网IP地址Port 22Host *-pUser rootIdentityFile /Users/liu/.ssh/key_sshProtocol 2Compression yesServerAliveInterval 60ServerAliveCountMax 20LogLevel INFO服务端配置修改配置vim /etc/ssh/sshd_config123456789HostKey /etc/ssh/ssh_host_rsa_keyRSAAuthentication yesPubkeyAuthentication yesAuthorizedKeysFile .ssh/authorized_keys #公钥文件存储位置UsePAM no # CentOS 7.5 中需要修改为 yes#下面参数选项根据自身需要进行修改；PasswordAuthentication yes #允许密码认证登录(不要手贱设置为 no, 不然你就登不上服务器了)PermitRootLogin no #允许root认证登录添加密钥将客户端id_rsa.pub文件内容复制到服务端authorized_keys文件重启服务重启sshd服务system restart sshd登录成功123~ ssh 91-pLast login: Fri Nov 29 10:16:33 2019 from 172.16.18.131[root@localhost ~]#常见问题查看安全登录日志cat /var/log/secure权限问题123chmod 700 ~/.sshchmod 644 ~/.ssh/authorized_keys # 信任文件的权限，必须是644chmod 600 ~/.ssh/id_rsa # 私钥文件的权限服务器配置问题getenforce setenforce 0把SELinux关闭]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript-自测题20]]></title>
     <url>%2F2019%2F11%2F28%2FJavaScript-%E8%87%AA%E6%B5%8B%E9%A2%9820%2F</url>
     <content type="text"><![CDATA[1234567891011121314151617181920212223var s = [];var arr = s;for(var i = 0; i &lt; 3; i++)&#123; var pusher = &#123; value: &quot;item&quot; + i &#125;,tmp; // i = 0 // pusher = &#123;value: &quot;item0&quot;&#125; // tmp.children = &#123;value: &quot;item0&quot;&#125; // arr = &#123;value: &quot;item0&quot;&#125; // s[0] = &#123;value: &quot;item0&quot;,children:[&#123;value:&quot;item0&quot;&#125;]&#125; if(i !== 2)&#123; tmp = []; pusher.children = tmp; &#125; arr.push(pusher); arr = tmp;&#125;console.log(s[0]);技术点：指针移动]]></content>
@@ -47,7 +58,7 @@
   <entry>
     <title><![CDATA[Nodejs项目架构和优化]]></title>
     <url>%2F2019%2F11%2F27%2FNodejs%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E5%92%8C%E4%BC%98%E5%8C%96%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[Nodejs应用场景Web开发：Express + EJS + Mongoose/MySQLREST开发：RestifyWeb聊天室(IM)：Express + Socket.ioWeb爬虫：Cheerio/RequestWeb博客：HexoWeb论坛: nodeclubWeb幻灯片：Cleaver前端包管理平台: bower.jsAuth认证：Passport定时任务工具: later浏览器环境工具: browserify命令行编程工具：CommanderWeb控制台工具: tty.js客户端应用工具: node-webkit操作系统: node-osNode架构和优化NodeJS异步优化IO原理浅析及优化方案异步IO的是与非前端通过异步IO（input输入/output输出）可以消除UI堵塞NodeJs适用于IO密集型不适用CPU密集型Node对异步IO的实现完美的异步IO应该是应用程序发起非阻塞调用，无需通过遍历或者事件幻想等方式轮询。Node对异步IO的实现几个特殊的API函数式编程在Node中的应用常用的Node控制异步API的技术手段NdoeJS内存管理机制及内存优化大规模Node站点解构原理分析服务器集群管理与Node集群的应用ServerLess/FAAS]]></content>
       <categories>
         <category>Nodejs</category>
       </categories>
